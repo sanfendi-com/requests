@@ -6,6 +6,7 @@ from codecs import open
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
+# 使用元组获取当前python版本
 CURRENT_PYTHON = sys.version_info[:2]
 REQUIRED_PYTHON = (3, 8)
 
@@ -74,7 +75,9 @@ test_requirements = [
 ]
 
 about = {}
+# get the current working directory
 here = os.path.abspath(os.path.dirname(__file__))
+# get the basic information through open file
 with open(os.path.join(here, "src", "requests", "__version__.py"), "r", "utf-8") as f:
     exec(f.read(), about)
 
