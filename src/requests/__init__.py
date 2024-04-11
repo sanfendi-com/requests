@@ -45,11 +45,13 @@ import urllib3
 from .exceptions import RequestsDependencyWarning
 
 try:
+    # charset_normalizer常用功能
     from charset_normalizer import __version__ as charset_normalizer_version
 except ImportError:
     charset_normalizer_version = None
 
 try:
+    # chardet
     from chardet import __version__ as chardet_version
 except ImportError:
     chardet_version = None
